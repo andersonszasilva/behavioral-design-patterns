@@ -3,11 +3,11 @@ package br.com.adesoszasilva.behavioraldesignpatterns.mediator;
 public class User {
 
 	private String name;
-	private ChatRoomMediator chatRoom;
+	private ChatRoomMediator mediator;
 	
-	public User(String name, ChatRoomFactory chatRoomFactory) {
+	public User(String name, ChatRoomMediator mediator) {
 		this.name = name;
-		this.chatRoom = chatRoomFactory.createChatRoom();
+		this.mediator = mediator;
 	}
 
 	public String getName() {
@@ -15,7 +15,7 @@ public class User {
 	}
 
 	public void sendMessage(String message) {
-		chatRoom.showMessage(this, message);
+		mediator.showMessage(this, message);
 	}
 
 }
