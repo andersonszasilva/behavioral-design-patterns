@@ -1,9 +1,9 @@
 package br.com.adesoszasilva.behavioraldesignpatterns.strategy;
 
-public class StrategyCalc {
+public class CalcStrategy {
    private Strategy strategy;
 
-   public StrategyCalc(Strategy strategy){
+   public CalcStrategy(Strategy strategy){
       this.strategy = strategy;
    }
 

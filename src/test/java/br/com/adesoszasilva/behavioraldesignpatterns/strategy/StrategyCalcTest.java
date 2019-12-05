@@ -8,9 +8,9 @@ public class StrategyCalcTest {
 
 	@Test
 	public void testExecuteStrategy() {
-		StrategyCalc subtractStrategy = new StrategyCalc(new OperationSubstract());
-		StrategyCalc sumStrategy = new StrategyCalc(new OperationAdd());		
-		StrategyCalc multiplyStrategy = new StrategyCalc(new OperationMultiply());
+		CalcStrategy subtractStrategy = new CalcStrategy(new OperationSubstract());
+		CalcStrategy sumStrategy = new CalcStrategy(new OperationAdd());		
+		CalcStrategy multiplyStrategy = new CalcStrategy(new OperationMultiply());
 		
 		assertEquals(5, subtractStrategy.executeStrategy(10, 5));
 		assertEquals(15, sumStrategy.executeStrategy(10, 5));
